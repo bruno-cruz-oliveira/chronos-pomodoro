@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# ⏱️ Chronos Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo web de produtividade baseado na Técnica Pomodoro,
+desenvolvido com **React + Vite**.
 
-Currently, two official plugins are available:
+## 📜 Visão Geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O Chronos Pomodoro ajuda você a manter o foco durante os estudos ou
+trabalho, utilizando ciclos de foco e descanso de maneira simples e
+intuitiva.\
+O projeto utiliza:
 
-## React Compiler
+- React 19
+- Vite
+- CSS (Global ou CSS Modules)
+- PWA (manifest + ícones)
+- Suporte a tema escuro
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+- Temporizador Pomodoro com ciclos
+- Interface leve e moderna
+- Navegação rápida sem recarregar a página
+- Totalmente responsivo
+- Build otimizado com Vite
+- Ícones e manifest configurados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Tecnologias Utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Tecnologia Função
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**React** Interface e componentes
+**Vite** Dev server e empacotamento
+**JavaScript / JSX** Estrutura e lógica
+**CSS** Estilização
+**HTML5 + Manifest** PWA e metadados
+
+## 📂 Estrutura do Projeto
+
+    root/
+     ├─ public/
+     ├─ src/
+     │   ├─ components/
+     │   ├─ hooks/
+     │   ├─ styles/
+     │   └─ main.jsx
+     ├─ index.html
+     ├─ package.json
+     ├─ vite.config.js
+     └─ README.md
+
+## 🛠 Instalação e Desenvolvimento
+
+### **1. Clonar repositório**
+
+```bash
+git clone https://github.com/seu-usuario/chronos-pomodoro.git
+cd chronos-pomodoro
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### **2. Instalar dependências**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### **3. Rodar em modo de desenvolvimento**
+
+```bash
+npm run dev
+```
+
+O app estará disponível em:
+
+    http://localhost:5173
+
+## 🏗️ Build para Produção
+
+```bash
+npm run build
+```
+
+Pré-visualizar:
+
+```bash
+npm run preview
 ```
